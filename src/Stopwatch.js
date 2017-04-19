@@ -1,35 +1,44 @@
 import React, { Component } from 'react';
-import "./Stopwatch.css"
+import "./Stopwatch.css";
 
 class Stopwatch extends Component {
   constructor(){
     super();
     this.state = {
-      seconds: 0
+      secondsCounted: 0
     }
+    this._Timer = this._Timer.bind(this);
+    this._Reset = this._Reset.bind(this);
   }
-  _startTime(){
-    let seconds = this.state.seconds;
-    let start = setInterval(seconds,1000);
-    this.setState({seconds: start});
+
+  _Stop(){
+    var running = setInterval(this._Timer, 1000);
+    clearInterval(running);
+    console.log('clicked')
   }
-   _stopTime(){
-     let seconds = this.state.seconds;
-     let stop = clearInterval(seconds);
-     this.setState({seconds: stop});
+
+  _Timer(){
+    let seconds = this.state.secondsCounted;
+    this.setState({secondsCounted: seconds + 1});
   }
+
+  _Reset(){
+    this.setState({secondsCounted:0});
+  }
+
   render() {
     return (
       <div className="stopwatch">
-        <h1>{this.state.seconds}</h1>
+        <h1>{this.state.secondsCounted}</h1>
         <div className="controls">
-          <button onClick={this.setState({seconds:0})}>Reset</button>
-          <button onClick={()=>this._startTime.bind(this)}>Start</button>
-          <button onClick={()=>this._stopTime.bind(this)}>Pause</button>
+          <button onClick={this._Reset}>Reset</button>
+          <button onClick={()=>setInterval(this._Timer, 1000)}>Start</button>
+          <button onClick={this._Stop}>Pause</button>
         </div>
       </div>
     );
   }
 }
+
 
 export default Stopwatch;
