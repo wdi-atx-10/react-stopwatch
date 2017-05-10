@@ -1,6 +1,7 @@
 {
   "name": "react-stopwatch",
   "version": "0.1.0",
+  "homepage": "https://github.com/Jorge-Cano/react-stopwatch",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.7.0"
