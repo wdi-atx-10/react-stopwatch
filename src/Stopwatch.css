@@ -7,8 +7,21 @@
 
 h1 {
   font-family: Josefin Slab;
-  font-size: 72px;
+  font-size: 200px;
   text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 65px;
+}
+
+h2 span {
+  background: rgba(180, 15, 15, .7);
+  padding: 20px;
+  border-radius: 34px;
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
 }
 
 button {
@@ -26,4 +39,5 @@ button {
 
 button:hover{
   background: #356094;
+  transition: 1s;
 }
