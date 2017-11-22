@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
 
 .controls {
-  margin: 40px;
+  margin: 50px;
   text-align: center;
 }
 
@@ -17,7 +17,7 @@ h2 {
 }
 
 h2 span {
-  background: gray;
+  background: purple;
   padding: 5px;
   border-radius: 25px;
   border: 2px solid black;
