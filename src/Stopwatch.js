@@ -31,7 +31,7 @@ class Stopwatch extends Component {
         <div className="stopwatch">
          <h1>{this.state.time}</h1>
           <div className="something">
-            <h2><span>Ready, Steady, Go!</span></h2>
+            <h2><span> Ready, Steady, Go </span></h2>
           </div>
           <div className="controls">
            <button onClick={()=>{this.start()}}>Start</button>
